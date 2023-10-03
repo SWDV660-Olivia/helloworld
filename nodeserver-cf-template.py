@@ -45,7 +45,7 @@ ApplicationName
 
 t = Template()
 
-t.add_description("Effective DevOps in AWS: HelloWorld web application")
+t.description = "Olivia Hello World Server"
 
 t.add_parameter(Parameter(
     "KeyPair",
@@ -139,5 +139,6 @@ t.add_output(Output(
     ]),
 ))
 
-print(t.to_json())
+cloudformation_template = t.to_json()
+print(cloudformation_template)
 
